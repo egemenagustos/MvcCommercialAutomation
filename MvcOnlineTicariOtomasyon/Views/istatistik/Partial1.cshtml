@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MvcOnlineTicariOtomasyon.Models.Siniflar.SinifGrup2>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Departman Personel Sayıları</h3>
+    </div>
+    <div class="card-body p-0">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Departman</th>
+                    <th>Progress Bar</th>
+                    <th style="width: 40px">Sayı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                <tr>
+                    <td>1.</td>
+                    <td>@item.Departman</td>
+                    <td>
+                        <div class="progress progress-xs">
+                            <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                        </div>
+                    </td>
+                    <td><span class="badge bg-danger">@item.Sayi</span></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

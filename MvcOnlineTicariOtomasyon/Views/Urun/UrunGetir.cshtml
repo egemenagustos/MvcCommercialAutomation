@@ -1,0 +1,41 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Urun
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Ürün Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("UrunGuncelle", "Urun", FormMethod.Post))
+{
+    @Html.Label("Ürün Id")
+    @Html.TextBoxFor(x => x.Urunid, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Marka")
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Stok")
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Alış Fiyatı")
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Satış Fiyatı")
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Kategori")
+    @Html.DropDownListFor(x => x.Kategoriid, (List<SelectListItem>)ViewBag.deger, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Görsel")
+    @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Durum")
+    @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ürün Güncelle</button>
+}
+
+
